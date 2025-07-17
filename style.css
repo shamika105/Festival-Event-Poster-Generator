@@ -1,0 +1,346 @@
+.poster {
+         /* Set fixed width for consistent export */
+        height: auto;
+        border-radius: 12px;
+        padding: 10px;
+        min-height: 1000px; /* Increased for larger poster */
+        box-shadow: 0 4px 14px rgba(126, 16, 153, 0.788);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .poster-buttons {
+        margin-top: 15px;
+        display: flex;
+        gap: 100px;   
+      }
+
+      .btn-generate {
+        
+        background-color: #4CAF50 !important;
+  color: white !important;
+  border: none !important;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 2px 2px 8px rgba(95, 25, 128, 0.842);
+      }
+      
+      .btn-generate:hover {
+        background-color: #388e3c !important;
+        transform: scale(1.05);
+      }
+      
+      /*  */
+      .btn-reset {
+        background-color: #dc3545 !important; /* Bootstrap Red */
+        color: white !important;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+      }
+      
+      .btn-reset:hover {
+        background-color: #bb2d3b !important;
+        transform: scale(1.05);
+        /* Darker on hover */
+      }
+      
+      
+      
+      .generate-button:hover {
+        background-color: #3730a3;
+        transform: scale(1.05); /* Darker on hover */
+      }
+
+      /* QR Code generate */
+      #qr-container {
+        position: fixed;     /* Fix to viewport */
+        top: 10px;           /* 10px from top */
+        right: 10px;         /* 10px from right */
+        background: white;   /* Optional: background to make it stand out */
+        padding: 5px;
+        border: 1px solid #ccc;
+        z-index: 1000;       /* On top of other elements */
+        text-align: center;
+        width: 120px;        /* Adjust width if needed */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Optional shadow */
+      }
+      
+      #qr-container img {
+        width: 100px;        /* Scale QR code */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      
+
+      .language-select{
+        position:absolute;
+        top: 10px;
+        right:20px;
+        z-index: 10;
+      }
+
+      .template1 {
+        background-color: #f5f5f5;
+        color: #fff;
+      }
+      .template2 {
+        background: linear-gradient(to right, #ffb347, #ffcc33);
+        color: #fff;
+      }
+
+      .template3{
+        background: linear-gradient(to right, #47fff0, #ffcc33);
+        color: #fff;
+      }
+
+      .template4{
+        background: linear-gradient(to right, #6f47ff, #ffcc33);
+        color: #fff;
+      }
+
+      .template5{
+        background: linear-gradient(to right, #c547ff, #ffcc33);
+        color: #fff;
+      }
+
+      .template6{
+        background: linear-gradient(to right, #7bff47b0, #ffcc33);
+        color: #fff;
+      }
+
+      .template7{
+        background: linear-gradient(to right, #b4a40d, #ffcc33);
+        color: #fff;
+      }
+
+      .poster-wrapper {
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      
+      .poster-wrapper:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(255, 0, 150, 0.4);
+        border: 2px solid #ffc107;
+      }
+
+      .poster-size-a4 {
+        width: 794px; /* Approx A4 width at 96dpi */
+        height: 1123px;
+      }
+      
+      .poster-size-insta {
+        width: 1080px;
+        height: 1080px;
+      }
+      
+      .poster-size-story {
+        width: 1080px;
+        height: 1920px;
+      }
+
+      #qrCode canvas {
+        width: 200px !important;
+  height: 200px !important;
+  image-rendering: pixelated; /* makes QR sharper */
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #000;
+  border-radius: 5px;
+      }
+
+      img[alt="Fill"] {
+        display: none;
+      }
+
+      .action-btn {
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 10px 16px;
+        border-radius: 8px;
+        background-color: #4f46e5; /* Indigo-ish */
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      .action-btn:hover {
+        background-color: #3730a3; /* Darker on hover */
+        transform: scale(1.05);
+      }
+      
+
+      /* Template Styles */
+      
+      .preview-dark {
+        background-image: url('images/dark_theme.jpg');
+        background-color: #2d2d2d;
+        color: #f1f1f1;
+      }
+      
+      .preview-fun {
+        background-image: url('images/fun_cartoon.jpg');
+        background: linear-gradient(to right, #ffecd2, #fcb69f);
+        color: #5a2a27;
+      }
+      
+      .preview-diwali {
+        background-image: url('images/Diwali_poster.png');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+      }
+      
+      .preview-tech {
+        background-image: url('images/tech_talk.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+      }
+      
+      /* .preview-music {
+        background-image: url('images/music_festival.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+      }
+       */
+      .preview-sport {
+        background-image: url('images/sport_festival.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+      }
+      
+      .preview-ganesh {
+        background-image: url('images/Ganeshfestival.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-shadow: 1px 1px 3px #000;
+      }
+      
+      .preview-ganesh::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+      }
+      
+      .preview-ganesh * {
+        position: relative;
+        z-index: 2;
+      }
+      
+      .poster h2 {
+        font-weight: bold;
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+      
+      .poster p {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      /* === Inline Editable Styling (Add Below) === */
+[contenteditable="true"] {
+        border-bottom: 1px dashed #999;
+        cursor: text;
+      }
+
+      .btn-warning {
+        background-color: #ffc107;
+        color: #000;
+        font-weight: 800;
+        border: none;
+      }
+      
+      .btn-warning:hover {
+        background-color: #e0a800;
+      }
+
+      .share-download-wrapper {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+      
+      
+      
+      #posterImage {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      
+      .col-auto {
+        margin-right: 15px;
+      }
+      
+      .btn {
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-weight: 600;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+      
+      .btn-success:hover {
+        background-color: #157347;
+      }
+      
+      @media (max-width: 768px) {
+        .poster {
+          width: 100%;
+          min-height: auto;
+          padding: 15px;
+        }
+      }
+
+      .form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #ced4da;
+}
+
+#posterDate,
+#posterTime,
+#posterVenue,
+#posterDesc {
+  margin-bottom: 18px;
+  font-size: 18px;
+  text-align: center;
+}
+

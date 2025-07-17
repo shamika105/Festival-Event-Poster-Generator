@@ -18,5 +18,6 @@ An interactive web application that allows users to create customized festival o
 - HTML5 & CSS3
 - JavaScript (for form handling and QR code generation)
 - QR code generation library (e.g., [QRious](https://github.com/neocotic/qrious) or similar)
+- BootStrap
 
 
